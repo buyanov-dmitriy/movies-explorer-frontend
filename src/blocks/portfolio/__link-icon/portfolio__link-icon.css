@@ -1,0 +1,20 @@
+.portfolio__link-icon {
+  margin: 0;
+  padding: 0;
+  width: 29px;
+  height: 29px;
+}
+
+@media screen and (max-width: 917px) {
+  .portfolio__link-icon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .portfolio__link-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

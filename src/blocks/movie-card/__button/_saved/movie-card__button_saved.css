@@ -1,0 +1,7 @@
+.movie-card__button_saved {
+  background-image: url(../../../../images/saved.svg);
+  background-repeat: no-repeat;
+  background-size: 8px 4,5px;
+  background-position: center;
+  background-color: #FF4062;
+}

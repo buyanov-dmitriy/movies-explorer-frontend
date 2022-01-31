@@ -1,0 +1,6 @@
+.movie-card__button_is-saved-page {
+  background-image: url(../../../../images/delete.svg);
+  background-repeat: no-repeat;
+  background-size: 7px 7px;
+  background-position: center;
+}

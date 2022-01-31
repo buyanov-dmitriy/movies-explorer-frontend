@@ -1,0 +1,15 @@
+.portflio__link {
+  margin: 0;
+  padding: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #E8E8E8;
+}
+
+@media screen and (max-width: 601px) {
+  .portflio__link {
+    height: 48px;
+  }
+}

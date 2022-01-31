@@ -1,0 +1,26 @@
+.hidden-menu__link-to-account {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  position: absolute;
+  bottom: 92px;
+  left: 210px;
+  height: 30px;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity .3s linear;
+  cursor: pointer;
+}
+
+.hidden-menu__link-to-account:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 601px) {
+  .hidden-menu__link-to-account {
+    bottom: 48px;
+    left: calc(100vw / 2 - 50px)
+  }
+}

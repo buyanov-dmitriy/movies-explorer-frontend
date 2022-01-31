@@ -1,0 +1,6 @@
+@import url(../../blocks/error-popup/error-popup.css);
+@import url(../../blocks/error-popup/_opened/error-popup_opened.css);
+@import url(../../blocks/error-popup/__container/error-popup__container.css);
+@import url(../../blocks/error-popup/__icon/error-popup__icon.css);
+@import url(../../blocks/error-popup/__title/error-popup__title.css);
+@import url(../../blocks/error-popup/__close/error-popup__close.css);

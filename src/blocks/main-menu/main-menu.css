@@ -1,0 +1,7 @@
+.main-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter', Arial, sans-serif;
+}

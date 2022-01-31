@@ -1,0 +1,24 @@
+.profile__change-button {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.profile__change-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 601px) {
+  .profile__change-button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

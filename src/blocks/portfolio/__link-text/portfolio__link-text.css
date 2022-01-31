@@ -1,0 +1,30 @@
+.portfolio__link-text {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  color: #000000;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  transition: opacity .3s linear;
+  cursor: pointer;
+}
+
+.portfolio__link-text:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 917px) {
+  .portfolio__link-text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .portfolio__link-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

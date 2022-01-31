@@ -1,0 +1,14 @@
+.profile__field-caption {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+
+.profile__field-caption:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px #4d90f0;;
+}

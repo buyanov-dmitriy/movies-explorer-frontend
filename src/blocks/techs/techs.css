@@ -1,0 +1,21 @@
+.techs {
+  margin: 0;
+  padding: 100px 70px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 917px) {
+  .techs {
+    padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .techs {
+    padding: 70px 18px;
+    background-color: #FFFFFF;
+  }
+}

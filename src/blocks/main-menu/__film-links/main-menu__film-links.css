@@ -1,0 +1,12 @@
+.main-menu__film-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 917px) {
+  .main-menu__film-links {
+    display: none;
+  }
+}

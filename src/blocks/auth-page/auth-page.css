@@ -1,0 +1,16 @@
+.auth-page {
+  margin: auto;
+  padding: 70px 0;
+  width: 396px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 601px) {
+  .auth-page {
+    padding: 56px 0;
+    width: 260px;
+    align-items: center;
+  }
+}

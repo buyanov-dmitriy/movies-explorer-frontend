@@ -1,0 +1,9 @@
+.hidden-menu_opened {
+  transform: translate(-520px,0);
+}
+
+@media screen and (max-width: 601px) {
+  .hidden-menu_opened {
+    transform: translate(-100vw,0);
+  }
+}

@@ -1,0 +1,27 @@
+.movies-list__button {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  height: 36px;
+  margin: auto;
+  border: solid 1px #E8E8E8;
+  background: none;
+  transition: opacity .3s linear;
+  cursor: pointer;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.movies-list__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 601px) {
+  .movies-list__button {
+    width: 240px;
+  }
+}

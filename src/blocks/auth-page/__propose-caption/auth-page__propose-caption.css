@@ -1,0 +1,17 @@
+.auth-page__propose-caption {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #A0A0A0;
+  text-align: center;
+}
+
+@media screen and (max-width: 601px) {
+  .auth-page__propose-caption {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

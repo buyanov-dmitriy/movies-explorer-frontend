@@ -1,0 +1,9 @@
+.main-menu_not-main-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: 'Inter', Arial, sans-serif;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+}
