@@ -1,17 +1,14 @@
 import Promo from "../Promo/Promo";
-import Header from "../Header/Header";
 import NavTab from "../NavTab/NavTab";
 import AboutMe from "../AboutMe/AboutMe";
 import AboutProject from "../AboutProject/AboutProject";
 import Techs from "../Techs/Techs";
 import Portfolio from "../Portfolio/Portfolio";
 
-function Main(props) {
+function Main() {
   return (
     <section className="main">
-      <Promo>
-        <Header isMainPage={true} onClickRegister={props.onClickRegister} onClickLogin={props.onClickLogin} />
-      </Promo>
+      <Promo />
       <NavTab />
       <AboutProject />
       <Techs />

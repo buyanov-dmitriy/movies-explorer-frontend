@@ -1,6 +1,6 @@
 .header {
-  margin: 0 70px;
-  padding: 0;
+  margin: 0;
+  padding: 0 70px;
   min-height: 74px;
   background-color: transparent;
   display: flex;
@@ -10,12 +10,12 @@
 
 @media screen and (max-width: 917px) {
   .header {
-    margin: 0 30px;
+    padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 601px) {
   .header {
-    margin: 0 14px;
+    padding: 0 14px;
   }
 }

@@ -9,9 +9,10 @@ function SavedMovies() {
     <section className="movies">
       <SearchForm />
       <MoviesCardList
-      movies={[{img: photo1, isSavedPage: true, isSaved: false},
-      {img: photo2, isSavedPage: true, isSaved: false},
-      {img: photo3, isSavedPage: true, isSaved: false}]} />
+      movies={[{img: photo1, isSavedPage: true, isSaved: false, alt: 'Картинка 1'},
+      {img: photo2, isSavedPage: true, isSaved: false, alt: 'Картинка 2'},
+      {img: photo3, isSavedPage: true, isSaved: false, alt: 'Картинка 3'}]}
+      isSavedPage={true} />
     </section>
   )
 }

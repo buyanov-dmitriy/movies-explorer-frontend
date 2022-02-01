@@ -10,6 +10,7 @@ import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import ErrorPopup from '../ErrorPopup/ErrorPopup';
+import PageContent from '../PageContent/PageContent';
 import { useState } from 'react';
 
 function App() {
@@ -52,28 +53,43 @@ function App() {
     <div className='page'>
       <Switch>
         <Route exact path='/'>
-          <Main onClickRegister={handleRegistrationButton} onClickLogin={handleLoginButton} />
+          <Header isMainPage={true} onClickRegister={handleRegistrationButton} onClickLogin={handleLoginButton} />
+          <PageContent>
+            <Main />
+          </PageContent>
         </Route>
         <Route path='/signup'>
-          <Register />
+          <PageContent>
+            <Register />
+          </PageContent>
         </Route>
         <Route path='/signin'>
-          <Login />
+          <PageContent>
+            <Login />
+          </PageContent>
         </Route>
         <Route path='/profile'>
           <Header onOpenMenu={handleMenuClick} isMainPage={false} />
-          <Profile />
+          <PageContent>
+            <Profile />
+          </PageContent>
         </Route>
         <Route path='/movies'>
           <Header onOpenMenu={handleMenuClick} isMainPage={false} />
-          <Movies />
+          <PageContent>
+            <Movies />
+          </PageContent>
         </Route>
         <Route path='/saved-movies'>
           <Header onOpenMenu={handleMenuClick} isMainPage={false} />
-          <SavedMovies />
+          <PageContent>
+            <SavedMovies />
+          </PageContent>
         </Route>
         <Route path='*'>
-          <NotFoundPage />
+          <PageContent>
+            <NotFoundPage />
+          </PageContent>
         </Route>
       </Switch>
       <Footer />

@@ -4,11 +4,11 @@ import accountLogo from '../../images/account.svg';
 function Navigation(props) {
   return (
     <section>
-      <div className={`main-menu ${!props.isMainPage && `main-menu__headden`}`}>
+      <div className={`main-menu ${!props.isMainPage && `main-menu_headden`}`}>
         <button className='main-menu__button' onClick={props.onClickRegister}>Регистрация</button>
         <button className='main-menu__button main-menu__enter-button' onClick={props.onClickLogin}>Войти</button>
       </div>
-      <div className={`main-menu_not-main-page ${props.isMainPage && `main-menu__headden`}`}>
+      <div className={`main-menu main-menu_not-main-page ${props.isMainPage && `main-menu_headden`}`}>
         <button className="main-menu__mobile" onClick={props.onOpenMenu}></button>
         <div className="main-menu__film-links">
           <Link to='/movies' className="main-menu__link">Фильмы</Link>

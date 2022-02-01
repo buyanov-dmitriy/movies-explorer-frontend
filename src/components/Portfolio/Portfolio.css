@@ -1,7 +1,7 @@
 @import url(../../blocks/portfolio/portfolio.css);
 @import url(../../blocks/portfolio/__name/portfolio__name.css);
 @import url(../../blocks/portfolio/__links/portfolio__links.css);
-@import url(../../blocks/portfolio/__link/portflio__link.css);
+@import url(../../blocks/portfolio/__link/portfolio__link.css);
 @import url(../../blocks/portfolio/__link/_last/portfolio__link_last.css);
 @import url(../../blocks/portfolio/__link-text/portfolio__link-text.css);
 @import url(../../blocks/portfolio/__link-icon/portfolio__link-icon.css);

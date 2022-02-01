@@ -7,11 +7,11 @@ function MoviesCardList(props) {
       <div className="movies-list__table">
         {(props.movies).map(currentMovie => {
           return (
-            <MoviesCard img={currentMovie.img} isSaved={currentMovie.isSaved} isSavedPage={currentMovie.isSavedPage} />
+            <MoviesCard key={Math.random()} alt={currentMovie.alt} img={currentMovie.img} isSaved={currentMovie.isSaved} isSavedPage={currentMovie.isSavedPage} />
           )
         })}
       </div>
-      <button className="movies-list__button">Ещё</button>
+      <button className={`movies-list__button ${props.isSavedPage && 'movies-list__button_disabled'}`}>Ещё</button>
     </section>
   )
 }

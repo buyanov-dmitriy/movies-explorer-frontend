@@ -19,17 +19,17 @@ function Movies() {
       <SearchForm />
       <MoviesCardList
         movies={[{ img: photo1, isSaved: Math.random() < 0.5 },
-        { img: photo2, isSaved: Math.random() < 0.5 },
-        { img: photo3, isSaved: Math.random() < 0.5 },
-        { img: photo4, isSaved: Math.random() < 0.5 },
-        { img: photo5, isSaved: Math.random() < 0.5 },
-        { img: photo6, isSaved: Math.random() < 0.5 },
-        { img: photo7, isSaved: Math.random() < 0.5 },
-        { img: photo8, isSaved: Math.random() < 0.5 },
-        { img: photo9, isSaved: Math.random() < 0.5 },
-        { img: photo10, isSaved: Math.random() < 0.5 },
-        { img: photo11, isSaved: Math.random() < 0.5 },
-        { img: photo12, isSaved: Math.random() < 0.5 }]} />
+        { img: photo2, isSaved: Math.random() < 0.5, alt: 'Картинка 1' },
+        { img: photo3, isSaved: Math.random() < 0.5, alt: 'Картинка 2' },
+        { img: photo4, isSaved: Math.random() < 0.5, alt: 'Картинка 3' },
+        { img: photo5, isSaved: Math.random() < 0.5, alt: 'Картинка 4' },
+        { img: photo6, isSaved: Math.random() < 0.5, alt: 'Картинка 5' },
+        { img: photo7, isSaved: Math.random() < 0.5, alt: 'Картинка 6' },
+        { img: photo8, isSaved: Math.random() < 0.5, alt: 'Картинка 7' },
+        { img: photo9, isSaved: Math.random() < 0.5, alt: 'Картинка 8' },
+        { img: photo10, isSaved: Math.random() < 0.5, alt: 'Картинка 9' },
+        { img: photo11, isSaved: Math.random() < 0.5, alt: 'Картинка 10' },
+        { img: photo12, isSaved: Math.random() < 0.5, alt: 'Картинка 11' }]} />
     </section>
   )
 }
