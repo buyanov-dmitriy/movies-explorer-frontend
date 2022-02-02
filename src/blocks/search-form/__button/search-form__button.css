@@ -1,0 +1,18 @@
+.search-form__button {
+  margin: 0 6px 0 0;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  background-image: url(../../../images/find.svg);
+  background-color: none;
+  border-radius: 50%;
+  border: none;
+  background-position: center;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.search-form__button:hover {
+  opacity: 0.8;
+}

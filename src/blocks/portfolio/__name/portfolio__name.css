@@ -1,0 +1,19 @@
+.portfolio__name {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A0A0A0;
+  mix-blend-mode: normal;
+}
+
+@media screen and (max-width: 601px) {
+  .portfolio__name {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}

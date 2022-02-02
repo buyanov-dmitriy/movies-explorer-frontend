@@ -1,0 +1,12 @@
+.about-me__links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 601px) {
+  .about-me__links {
+    gap: 26px;
+  }
+}

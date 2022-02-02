@@ -1,0 +1,25 @@
+.main-menu__link-to-profile {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.main-menu__link-to-profile:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 917px) {
+  .main-menu__link-to-profile {
+    display: none;
+  }
+}

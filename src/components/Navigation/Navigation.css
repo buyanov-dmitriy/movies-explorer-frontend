@@ -1,0 +1,10 @@
+@import url(../../blocks/main-menu/main-menu.css);
+@import url(../../blocks/main-menu/_not-main-page/main-menu_not-main-page.css);
+@import url(../../blocks/main-menu/__button/main-menu__button.css);
+@import url(../../blocks/main-menu/_headden/main-menu_headden.css);
+@import url(../../blocks/main-menu/__enter-button/main-menu__enter-button.css);
+@import url(../../blocks/main-menu/__film-links/main-menu__film-links.css);
+@import url(../../blocks/main-menu/__link/main-menu__link.css);
+@import url(../../blocks/main-menu/__link-to-profile/main-menu__link-to-profile.css);
+@import url(../../blocks/main-menu/__account-logo/main-menu__account-logo.css);
+@import url(../../blocks/main-menu/__mobile/main-menu__mobile.css);

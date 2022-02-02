@@ -1,0 +1,18 @@
+.error-popup__container {
+  margin: 0;
+  width: 100%;
+  max-width: 430px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: auto;
+}
+
+@media screen and (max-width: 601px) {
+  .error-popup__container {
+    max-width: 280px;
+  }
+}

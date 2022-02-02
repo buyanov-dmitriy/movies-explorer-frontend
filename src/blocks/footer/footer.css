@@ -1,0 +1,21 @@
+.footer {
+  margin: 0;
+  padding: 79px 70px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 917px) {
+  .footer {
+    padding: 79px 30px 20px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .footer {
+    padding: 79px 10px 10px;
+    gap: 30px;
+  }
+}

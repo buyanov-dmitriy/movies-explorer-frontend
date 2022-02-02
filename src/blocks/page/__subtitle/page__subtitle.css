@@ -1,0 +1,20 @@
+.page__subtitle {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  text-decoration: none;
+  min-height: 51px;
+  border-bottom: solid 1px #000000;
+}
+
+@media screen and (max-width: 601px) {
+  .page__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

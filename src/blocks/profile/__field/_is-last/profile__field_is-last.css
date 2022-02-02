@@ -1,0 +1,16 @@
+.profile__field_is-last {
+  border: none;
+  margin-bottom: 204px;
+}
+
+@media screen and (max-width: 917px) {
+  .profile__field_is-last {
+    margin-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .profile__field_is-last {
+    margin-bottom: 363px;
+  }
+}

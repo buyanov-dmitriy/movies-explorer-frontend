@@ -1,0 +1,11 @@
+.search-form__field {
+  width: 100%;
+  margin: 0 0 41px;
+  padding: 0;
+  background: #F9F9F9;
+  border-radius: 40px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

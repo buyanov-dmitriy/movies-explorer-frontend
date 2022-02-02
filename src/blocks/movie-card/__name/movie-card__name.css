@@ -1,0 +1,16 @@
+.movie-card__name {
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+@media screen and (max-width: 601px) {
+  .movie-card__name {
+    margin: 0 0 0 14px;
+    font-size: 12px;
+  }
+}

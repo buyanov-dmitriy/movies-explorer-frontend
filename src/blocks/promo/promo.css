@@ -1,0 +1,22 @@
+.promo {
+  margin: 0;
+  padding: 0;
+  min-height: 598px;
+  background-color: #F3C1F8;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media screen and (max-width: 917px) {
+  .promo {
+    min-height: 858px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .promo {
+    min-height: 644px;
+  }
+}

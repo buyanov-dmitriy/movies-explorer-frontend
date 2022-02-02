@@ -1,0 +1,20 @@
+.techs__used-tech-text {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 917px) {
+  .techs__used-tech-text {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.04em;
+  }
+}

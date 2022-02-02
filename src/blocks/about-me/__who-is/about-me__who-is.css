@@ -1,0 +1,27 @@
+.about-me__who-is {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  mix-blend-mode: normal;
+}
+
+@media screen and (max-width: 917px) {
+  .about-me__who-is {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .about-me__who-is {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

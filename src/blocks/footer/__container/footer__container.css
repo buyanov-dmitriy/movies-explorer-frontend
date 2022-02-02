@@ -1,0 +1,14 @@
+.footer__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 601px) {
+  .footer__container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,8 @@
+@import url(../../blocks/hidden-menu/hidden-menu.css);
+@import url(../../blocks/hidden-menu/_opened/hidden-menu_opened.css);
+@import url(../../blocks/hidden-menu/__close-button/hidden-menu__close-button.css);
+@import url(../../blocks/hidden-menu/__links/hidden-menu__links.css);
+@import url(../../blocks/hidden-menu/__link/hidden-menu__link.css);
+@import url(../../blocks/hidden-menu/__link-to-account/hidden-menu__link-to-account.css);
+@import url(../../blocks/hidden-menu/__link-to-account-text/hidden-menu__link-to-account-text.css);
+@import url(../../blocks/hidden-menu/__link-to-account-icon/hidden-menu__link-to-account-icon.css);

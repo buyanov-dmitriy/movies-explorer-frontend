@@ -1,0 +1,6 @@
+.main-menu_not-main-page {
+  justify-content: flex-start;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+}

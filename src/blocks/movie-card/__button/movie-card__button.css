@@ -1,0 +1,20 @@
+.movie-card__button {
+  margin: 0;
+  padding: 0;
+  background: #F9F9F9;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  color: #000000;
+  width: 100px;
+  height: 29px;
+  border: none;
+  transition: opacity .3s linear;
+  cursor: pointer;
+}
+
+.movie-card__button:hover {
+  opacity: 0.8;
+}

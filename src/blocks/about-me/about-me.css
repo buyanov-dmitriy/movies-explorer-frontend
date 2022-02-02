@@ -1,0 +1,19 @@
+.about-me {
+  margin: 0;
+  padding: 100px 70px;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 917px) {
+  .about-me {
+    padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .about-me {
+    padding: 70px 14px;
+  }
+}

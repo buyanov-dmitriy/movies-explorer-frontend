@@ -1,0 +1,12 @@
+@import url(../../blocks/auth-page/auth-page.css);
+@import url(../../blocks/auth-page/__title/auth-page__title.css);
+@import url(../../blocks/auth-page/__logo/auth-page__logo.css);
+@import url(../../blocks/auth-page/__propose/auth-page__propose.css);
+@import url(../../blocks/auth-page/__propose-caption/auth-page__propose-caption.css);
+@import url(../../blocks/auth-page/__propose-link/auth-page__propose-link.css);
+@import url(../../blocks/auth-page/__form/auth-page__form.css);
+@import url(../../blocks/auth-page/__form-section/auth-page__form-section.css);
+@import url(../../blocks/auth-page/__form-section/_hidden/auth-page__form-section_hidden.css);
+@import url(../../blocks/auth-page/__form-label/auth-page__form-label.css);
+@import url(../../blocks/auth-page/__form-field/auth-page__form-field.css);
+@import url(../../blocks/auth-page/__form-submit/auth-page__form-submit.css);

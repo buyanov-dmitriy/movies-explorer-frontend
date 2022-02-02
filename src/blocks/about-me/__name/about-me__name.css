@@ -1,0 +1,28 @@
+.about-me__name {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 917px) {
+  .about-me__name {
+    margin-bottom: 16px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .about-me__name {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

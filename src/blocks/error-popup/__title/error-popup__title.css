@@ -1,0 +1,26 @@
+.error-popup__title {
+  margin: 0;
+  margin-left: 36px;
+  margin-bottom: 54px;
+  padding: 0;
+  max-width: 330px;
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  text-align: center;
+  align-self: center;
+}
+
+@media screen and (max-width: 601px) {
+  .error-popup__title {
+    margin-bottom: 75px;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 238px;
+    margin-left: 22px;
+    margin-top: 40px;
+  }
+}

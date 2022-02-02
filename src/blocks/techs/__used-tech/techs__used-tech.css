@@ -1,0 +1,9 @@
+.techs__used-tech {
+  margin: 0;
+  padding: 0;
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

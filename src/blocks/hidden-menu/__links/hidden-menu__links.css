@@ -1,0 +1,15 @@
+.hidden-menu__links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+}
+
+@media screen and (max-width: 601px) {
+  .hidden-menu__links {
+    gap: 24px;
+  }
+}

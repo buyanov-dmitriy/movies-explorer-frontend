@@ -1,0 +1,23 @@
+.not-found-page__link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.not-found-page__link:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 601px) {
+  .not-found-page__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
