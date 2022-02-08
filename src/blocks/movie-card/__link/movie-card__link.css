@@ -1,0 +1,12 @@
+.movie-card__link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background: none;
+  transition: opacity .3s linear;
+  cursor: pointer;
+}
+
+.movie-card__link:hover {
+  opacity: 0.8;
+}

@@ -1,30 +1,35 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import PageContent from "../PageContent/PageContent";
 
 function Profile(props) {
-  const [isInputDisabled, setIsInputDisabled] = useState(true);
+  const user = useContext(CurrentUserContext);
 
-  function handleEditProfile() {
-    setIsInputDisabled(false);
+  function handleSubmitProfile(event) {
+    event.preventDefault();
+    props.onSubmit(user);
   }
 
   return (
-    <section className="profile">
-      <h2 className="profile__title">Привет, {props.userName}!</h2>
-      <div className="profile__user-information">
-        <div className="profile__field">
-          <p className="profile__field-caption">Имя</p>
-          <input className="profile__field-contain" placeholder={props.userName} disabled={isInputDisabled ? true : false} name="user-name" id="user-name" />
+    <PageContent>
+      <section className="profile">
+        <h2 className="profile__title">Привет, {user.name}!</h2>
+        <form onSubmit={handleSubmitProfile} className="profile__user-information">
+          <div className="profile__field">
+            <p className="profile__field-caption">Имя</p>
+            <input onChange={props.onChange} className="profile__field-contain" value={user.name} name="name" id="user-name" />
+          </div>
+          <div className="profile__field profile__field_is-last">
+            <p className="profile__field-caption">E-mail</p>
+            <input onChange={props.onChange} className="profile__field-contain" value={user.email} name="email" id="user-email" />
+          </div>
+          <input type='submit' className="profile__change-button" value='Редактировать' name='profile-submit' />
+        </form>
+        <div className="profile__buttons">
+          <button onClick={props.onClick} className="profile__exit-button">Выйти из аккаунта</button>
         </div>
-        <div className="profile__field profile__field_is-last">
-          <p className="profile__field-caption">E-mail</p>
-          <input className="profile__field-contain" placeholder={props.userEmail} disabled={isInputDisabled ? true : false} name="user-email" id="user-email" />
-        </div>
-      </div>
-      <div className="profile__buttons">
-        <button className="profile__change-button" onClick={handleEditProfile}>Редактировать</button>
-        <button className="profile__exit-button">Выйти из аккаунта</button>
-      </div>
-    </section>
+      </section>
+    </PageContent>
   )
 }
 
