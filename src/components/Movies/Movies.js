@@ -10,13 +10,13 @@ import * as validation from '../../utils/validation';
 function Movies(props) {
   const [movies, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState('');
-  const [foundMovies, setFoundMovies] = useState([]);
+  const [foundMovies, setFoundMovies] = useState(localStorage.getItem('movies') !== null ? JSON.parse(localStorage.getItem('movies')) : []);
   const [isLoading, setIsLoading] = useState(false);
   const [lengthFoundMovies, setLengthFoundMovies] = useState(-1);
   const [wasSearching, setWasSearching] = useState(false);
   const [isErrorPopupOpen, setIsErrorPopupOpen] = useState(false);
   const [isValidated, setIsValidated] = useState(true);
-  const [isShortMovie, setIsShortMovie] = useState(false);
+  const [isShortMovie, setIsShortMovie] = useState(localStorage.getItem('checkMovies') !== undefined ? localStorage.getItem('checkMovies') : false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,7 +25,7 @@ function Movies(props) {
     }
     else {
       setIsValidated(true);
-
+      localStorage.setItem('formValue', JSON.stringify(searchMovie));
       setIsLoading(true);
       moviesApi.getMovies()
         .then(response => {
@@ -132,7 +132,8 @@ function Movies(props) {
     <PageContent>
       <section className="movies">
         <SearchForm
-          check={localStorage.getItem('checkMovies') !== undefined ? localStorage.getItem('checkMovies') : false}
+          formValue={localStorage.getItem('formValue')}
+          check={isShortMovie}
           handleCheck={handleCheck}
           isValidated={isValidated}
           onChange={handleChangeMovie}

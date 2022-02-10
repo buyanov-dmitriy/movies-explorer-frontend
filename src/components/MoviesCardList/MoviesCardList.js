@@ -11,34 +11,34 @@ function MoviesCardList(props) {
     moviesOnWindow = 5;
   }
   const [addMovies, setAddMovies] = useState(window.screen.width <= 768 ? 2 : 3);
-  const movies = props.movies;
-  const moviesLength = (props.movies).length;
-  const [isButtonHidden, setIsButtonHidden] = useState(moviesLength <= moviesOnWindow);
+  //const movies = props.movies;
+  //const moviesLength = (props.movies).length;
+  const [isButtonHidden, setIsButtonHidden] = useState((props.movies).length <= moviesOnWindow);
   const [lastMovie, setLastMovie] = useState(moviesOnWindow - 1);
-  const [renderedMovies, setRenderedMovies] = useState(moviesLength <= moviesOnWindow ? movies : movies.slice(0, lastMovie + 1));
+  const [renderedMovies, setRenderedMovies] = useState((props.movies).length <= moviesOnWindow ? props.movies : (props.movies).slice(0, lastMovie + 1));
 
   function loadNextMovies() {
-    const nextMovies = moviesLength - lastMovie - 1;
+    const nextMovies = (props.movies).length - lastMovie - 1;
     setLastMovie(nextMovies > addMovies ? lastMovie + addMovies : lastMovie + nextMovies);
-    setRenderedMovies(movies.slice(0, lastMovie + 1));
+    setRenderedMovies((props.movies).slice(0, lastMovie + 1));
   }
 
   useEffect(() => {
-    if (moviesLength <= moviesOnWindow) {
+    if ((props.movies).length <= moviesOnWindow) {
       setIsButtonHidden(true);
     }
     else {
-      setIsButtonHidden(moviesLength - renderedMovies.length + addMovies <= addMovies);
+      setIsButtonHidden((props.movies).length - renderedMovies.length + addMovies <= addMovies);
     }
-  }, [moviesLength, renderedMovies, lastMovie, addMovies]);
+  }, [(props.movies).length, renderedMovies, lastMovie, addMovies]);
 
   useEffect(() => {
-    setRenderedMovies(movies.slice(0, lastMovie + 1));
+    setRenderedMovies((props.movies).slice(0, lastMovie + 1));
   }, [lastMovie, addMovies]);
 
   useEffect(() => {
-    setRenderedMovies(moviesLength <= moviesOnWindow ? movies : movies.slice(0, lastMovie + 1))
-  }, [moviesLength, addMovies])
+    setRenderedMovies((props.movies).length <= moviesOnWindow ? (props.movies) : (props.movies).slice(0, lastMovie + 1))
+  }, [(props.movies).length, addMovies])
 
   useEffect(() => {
     function handleResize() {
@@ -47,9 +47,10 @@ function MoviesCardList(props) {
 
     window.addEventListener('resize', handleResize);
   })
-
-  //console.log(props.length === 0);
-  //console.log(props.wasSearching);
+  //console.log(renderedMovies);
+  useEffect(() => {
+    setRenderedMovies(props.movies);
+  }, [props.movies]);
 
   return (
     <section className="movies-list">

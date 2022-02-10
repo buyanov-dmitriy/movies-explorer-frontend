@@ -1,6 +1,6 @@
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import mainApi from "../../utils/MainApi";
 import ErrorPopup from "../ErrorPopup/ErrorPopup";
 import PageContent from "../PageContent/PageContent";
@@ -10,7 +10,7 @@ function SavedMovies(props) {
   const [searchMovie, setSearchMovie] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [lengthFoundMovies, setLengthFoundMovies] = useState(-1);
-  const [foundMovies, setFoundMovies] = useState([]);
+  const [foundMovies, setFoundMovies] = useState(props.savedMovies);
   const [wasSearching, setWasSearching] = useState(false);
   const [isErrorPopupOpen, setIsErrorPopupOpen] = useState(false);
   const [isValidated, setIsValidated] = useState(true);
@@ -65,14 +65,30 @@ function SavedMovies(props) {
 
   function handleCheck(checked) {
     setIsShortMovie(checked);
-    localStorage.setItem('checkSavedMovies', checked);
+    //localStorage.setItem('checkSavedMovies', checked);
+    if (checked) {
+      const newMovies = (foundMovies).filter(movie => {
+        return (Number(movie.duration) < 40);
+      });
+      //console.log('imhere');
+      setFoundMovies(newMovies);
+      setLengthFoundMovies(newMovies.length);
+    }
+    /*else {
+      setFoundMovies(props.savedMovies);
+      setLengthFoundMovies((props.savedMovies).length);
+    }*/
   }
+
+  useEffect(() => {
+    setFoundMovies(props.savedMovies);
+  }, [props.savedMovies]);
 
   return (
     <PageContent>
       <section className="movies">
         <SearchForm
-          check={localStorage.getItem('checkSavedMovies') !== undefined ? localStorage.getItem('checkMovies') : false}
+          check={false}
           handleCheck={handleCheck}
           isValidated={isValidated}
           onChange={handleChangeMovie}
@@ -80,7 +96,7 @@ function SavedMovies(props) {
         <MoviesCardList
           onMovieSave={handleMovieSave}
           isSavedPage={true}
-          movies={foundMovies.length !== 0 ? foundMovies : props.savedMovies}
+          movies={foundMovies}
           isLoading={isLoading}
           wasSearching={wasSearching}
           length={lengthFoundMovies} />

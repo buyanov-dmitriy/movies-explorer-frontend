@@ -1,0 +1,9 @@
+.profile__change-button_blocked {
+  opacity: 0.2;
+  transition: none;
+  cursor: default;
+}
+
+.profile__change-button_blocked:hover {
+  opacity: 0.2;
+}
