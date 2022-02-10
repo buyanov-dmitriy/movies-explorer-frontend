@@ -65,6 +65,7 @@ function SavedMovies(props) {
 
   function handleCheck(checked) {
     setIsShortMovie(checked);
+    setWasSearching(true);
     //localStorage.setItem('checkSavedMovies', checked);
     if (checked) {
       const newMovies = (foundMovies).filter(movie => {
