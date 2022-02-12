@@ -1,4 +1,4 @@
-import { Route, Switch, useHistory } from 'react-router';
+import { Route, Switch, useHistory, Redirect } from 'react-router';
 import Main from '../Main/Main';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -23,21 +23,11 @@ function App() {
   const [isErrorPopupOpen, setIsErrorPopupOpen] = useState({ isOpen: false, isError: false });
   const [user, setUser] = useState({ name: '', email: '' });
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('login') !== undefined ? localStorage.getItem('login') : false);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(localStorage.getItem('movies') !== null ? JSON.parse(localStorage.getItem('movies')) : []);
   const [userName, setUserName] = useState('');
   const [textPopup, setTextPopup] = useState('');
   const [oldUserInfo, setOldUserInfo] = useState({ name: '', email: '' })
   const [isButtonBlocked, setIsButtonBlocked] = useState(true);
-
-  async function getLoginStatus() {
-    await mainApi.getUser()
-      .then(() => {
-        return true
-      })
-      .catch(() => {
-        return false
-      })
-  }
 
   function handleRegistrationButton() {
     history.push('/signup');
@@ -187,9 +177,9 @@ function App() {
         setUser(user.user);
         setOldUserInfo(user.user);
         setUserName(user.user.name);
-        if (localStorage.getItem('movies') !== null) {
+        /*if (localStorage.getItem('movies') !== null) {
           setMovies(JSON.parse(localStorage.getItem('movies')));
-        }
+        }*/
         setLoggedIn(true);
       })
       .catch(error => console.log(error));
@@ -233,16 +223,16 @@ function App() {
             component={SavedMovies}
             savedMovies={savedMovies}
             handleDeleteMovie={deleteMovie} />
-          <Route path='/signup'>
+          {!loggedIn ? <Route path='/signup'>
             <PageContent>
               <Register onRegister={handleRegister} />
             </PageContent>
-          </Route>
-          <Route path='/signin'>
+          </Route> : <Redirect to='/' />}
+          {!loggedIn ? <Route path='/signin'>
             <PageContent>
               <Login onLogin={handleLogin} />
             </PageContent>
-          </Route>
+          </Route> : <Redirect to='/' /> }
           <Route path='*'>
             <PageContent>
               <NotFoundPage />

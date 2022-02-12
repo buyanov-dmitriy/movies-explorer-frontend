@@ -5,6 +5,7 @@
   background: none;
   transition: opacity .3s linear;
   cursor: pointer;
+  width: 100%;
 }
 
 .movie-card__link:hover {

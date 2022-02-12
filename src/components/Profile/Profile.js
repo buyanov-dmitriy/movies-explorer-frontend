@@ -1,8 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import PageContent from "../PageContent/PageContent";
 
 function Profile(props) {
+  const emailPattern = '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$';
+  const namePattern = '^[a-zA-Zа-яА-ЯёЁ\\s-]+$'
+
   const user = useContext(CurrentUserContext);
 
   function handleSubmitProfile(event) {
@@ -17,11 +20,23 @@ function Profile(props) {
         <form onSubmit={handleSubmitProfile} className="profile__user-information">
           <div className="profile__field">
             <p className="profile__field-caption">Имя</p>
-            <input onChange={props.onChange} className="profile__field-contain" value={user.name} name="name" id="user-name" />
+            <input
+              pattern={namePattern}
+              onChange={props.onChange}
+              className="profile__field-contain"
+              value={user.name}
+              name="name"
+              id="user-name" />
           </div>
           <div className="profile__field profile__field_is-last">
             <p className="profile__field-caption">E-mail</p>
-            <input onChange={props.onChange} className="profile__field-contain" value={user.email} name="email" id="user-email" />
+            <input
+              pattern={emailPattern}
+              onChange={props.onChange}
+              className="profile__field-contain"
+              value={user.email}
+              name="email"
+              id="user-email" />
           </div>
           <input
             disabled={props.isButtonBlocked}
