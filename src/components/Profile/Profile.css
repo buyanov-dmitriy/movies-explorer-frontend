@@ -7,4 +7,5 @@
 @import url(../../blocks/profile/__field-contain/profile__field-contain.css);
 @import url(../../blocks/profile/__buttons/profile__buttons.css);
 @import url(../../blocks/profile/__change-button/profile__change-button.css);
+@import url(../../blocks/profile/__change-button/_blocked/profile__change-button_blocked.css);
 @import url(../../blocks/profile/__exit-button/profile__exit-button.css);

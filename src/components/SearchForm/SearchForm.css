@@ -2,3 +2,5 @@
 @import url(../../blocks/search-form/__field/search-form__field.css);
 @import url(../../blocks/search-form/__input/search-form__input.css);
 @import url(../../blocks/search-form/__button/search-form__button.css);
+@import url(../../blocks/search-form/__error/search-form__error.css);
+@import url(../../blocks/search-form/__error/_hidden/search-form__error_hidden.css);

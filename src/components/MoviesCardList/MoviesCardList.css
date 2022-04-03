@@ -2,3 +2,4 @@
 @import url(../../blocks/movies-list/__table/movies-list__table.css);
 @import url(../../blocks/movies-list/__button/movies-list__button.css);
 @import url(../../blocks/movies-list/__button/_disabled/movies-list__button_disabled.css);
+@import url(../../blocks/movies-list/__not-found/movies-list__not-found.css);
